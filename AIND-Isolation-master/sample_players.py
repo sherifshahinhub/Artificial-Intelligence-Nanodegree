@@ -156,13 +156,12 @@ class RandomPlayer():
             A randomly selected legal move; may return (-1, -1) if there are
             no available legal moves.
         """
-        
         legal_moves = game.get_legal_moves()
         if not legal_moves:
             return (-1, -1)
         return legal_moves[randint(0, len(legal_moves) - 1)]
- 
-    
+
+
 class GreedyPlayer():
     """Player that chooses next move to maximize heuristic score. This is
     equivalent to a minimax search agent with a search depth of one.
